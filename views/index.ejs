@@ -1,0 +1,30 @@
+<%- include("./partials/header.ejs") %>
+
+<div style="margin: 5% 40%;">
+	<h1>
+	All users here
+   </h1>
+
+</div>
+
+<div class="row row-cols-1 row-cols-md-3 g-4">
+<% users.forEach((user)=> {%>
+
+  <div class="col">
+    <div class="card h-100">
+      <div class="card-body" style="text-align: center;">
+        <h5 class="card-title"><%=user.name%></h5>
+        <p class="card-text"><%=user.email%>
+		 <p class="card-text">Balance - <%=user.balance%>
+		 <br>
+		  <a href="/users/<%=user._id%>" class="card-link">View</a>
+		</div>
+    </div>
+  </div>
+  
+<%});%>
+</div>
+ 
+    <a style="margin: 2% 46%;" href="/" class="btn btn-secondary">Go Back</a>
+ 
+<%- include("./partials/footer.ejs") %>

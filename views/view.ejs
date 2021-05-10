@@ -1,0 +1,30 @@
+<%- include("./partials/header.ejs") %>
+
+<div class="card text-center" style="margin:5% auto; width: 60%;">
+  <div class="card-header">
+    User
+  </div>
+  <div class="card-body">
+    <h5 class="card-title"><%=user.name%></h5>
+    <p class="card-text"><%=user.email%></p>
+	<p class="card-text" >Balance: Rs.
+		<span id="balance"><%=user.balance%></span></p>
+    <button id="transfer" value="<%=user._id%>"class="btn btn-primary">Transfer Amount</button>	
+	   <input type="hidden" id="user" value="<%=user._id%>">
+  </div>
+	 <div id="transfer-group" style="margin:1% 22%;">
+	 
+	  
+     </div>
+  <div class="card-footer text-muted">
+    <a href="/users" class="btn btn-secondary">Go Back</a>
+  </div>
+</div>
+
+
+
+  <!-- <div id="transfer-group" style="display: flex; flex-direction: column; justify-content: center;">
+	  
+	  
+  </div> -->
+<%- include("./partials/footer.ejs") %>
