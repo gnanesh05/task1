@@ -29,8 +29,7 @@ $(document).ready(()=>{
 						 form.id = "money-form";
 						 form.action ='';
 						 
-						 //div.appendChild(label1);
-						 //div.appendChild(label2);
+						
 						 group.append(div);
 						 
 						 var div1  = document.createElement('div');

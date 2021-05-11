@@ -10,8 +10,7 @@ require('dotenv').config();
 app.use(express.static("public"));
 
 
-//
-//console.log(process.env.DATABASE_URL); 
+
 var url = process.env.DATABASE_URL || "mongodb://localhost/bank";
 
 mongoose
@@ -55,7 +54,6 @@ app.get("/money", async(req,res)=>{
 	{
 	var user1 = await User.findById(id1);
 	var user2 = await User.findById(id2);
-	//res.send({user1:user1,user2:user2});
 	if(user1.balance >= amount)
 		{
 			user1.balance -= amount;
